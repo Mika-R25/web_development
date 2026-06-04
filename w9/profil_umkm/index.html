@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Profil UMKM</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff7b00, #ffb347);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffb347;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about {
+      text-align: center;
+    }
+
+    .about h2,
+    .produk h2,
+    .kontak h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ff7b00;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    .produk-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      color: #ff7b00;
+    }
+
+    .card-content p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .harga {
+      font-weight: bold;
+      color: #27ae60;
+      font-size: 18px;
+    }
+
+    .kontak {
+      text-align: center;
+    }
+
+    .kontak-box {
+      background: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .kontak-box p {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #ff7b00;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e56700;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>UMKM Nusantara Snack</h1>
+    <p>Camilan Tradisional dengan Rasa Modern</p>
+  </header>
+
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#produk">Produk</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="tentang" class="about">
+    <h2>Tentang UMKM</h2>
+    <p>
+      UMKM Nusantara Snack merupakan usaha makanan ringan lokal yang menghadirkan
+      berbagai camilan berkualitas dengan cita rasa khas Indonesia.
+      Produk kami dibuat dari bahan pilihan dan diproses secara higienis,
+      sehingga menghasilkan rasa yang lezat dan berkualitas.
+    </p>
+  </section>
+
+  <section id="produk" class="produk">
+    <h2>Produk Unggulan</h2>
+
+    <div class="produk-container">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000" alt="Keripik">
+        <div class="card-content">
+          <h3>Keripik Pedas</h3>
+          <p>Keripik renyah dengan bumbu pedas khas yang gurih dan nikmat.</p>
+          <p class="harga">Rp15.000</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1000" alt="Kue">
+        <div class="card-content">
+          <h3>Kue Kering</h3>
+          <p>Kue kering premium dengan rasa manis yang cocok untuk keluarga.</p>
+          <p class="harga">Rp25.000</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1000" alt="Coklat">
+        <div class="card-content">
+          <h3>Donat Coklat</h3>
+          <p>Donat lembut dengan topping coklat lumer yang menggugah selera.</p>
+          <p class="harga">Rp12.000</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="kontak" class="kontak">
+    <h2>Kontak Kami</h2>
+
+    <div class="kontak-box">
+      <p><strong>Nama UMKM:</strong> UMKM Nusantara Snack</p>
+      <p><strong>Alamat:</strong> Bandung, Jawa Barat</p>
+      <p><strong>WhatsApp:</strong> 0812-3456-7890</p>
+      <p><strong>Email:</strong> umkmnusantara@email.com</p>
+
+      <a href="https://wa.me/6281234567890" class="btn">Hubungi Kami</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 UMKM Nusantara Snack | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
