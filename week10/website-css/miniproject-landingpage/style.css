@@ -1,0 +1,235 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER - FLEXBOX */
+header {
+    background: #2e7d32;
+    color: white;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd54f;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('https://picsum.photos/1600/900');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffd54f;
+    color: black;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ffca28;
+}
+
+/* PRODUK - CSS GRID */
+.produk {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.produk h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.card button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #2e7d32;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-beli {
+    text-decoration: none;
+    color: white;
+}
+
+.card button:hover {
+    background: #1b5e20;
+}
+
+/* TENTANG */
+.tentang {
+    background: #f4f4f4;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.tentang h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.tentang p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* KONTAK */
+.kontak {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.kontak h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #1b5e20;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
