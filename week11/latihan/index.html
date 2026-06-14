@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latihan JavaScript</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Latihan JavaScript</h1>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('lat1', this)">Latihan 1 – Warna Teks</button>
+      <button class="tab" onclick="switchTab('lat2', this)">Latihan 2 – Biodata</button>
+      <button class="tab" onclick="switchTab('lat3', this)">Latihan 3 – Kalkulator</button>
+      <button class="tab" onclick="switchTab('lat4', this)">Latihan 4 – Validasi Form</button>
+    </div>
+
+    <!-- LAT 1 -->
+    <div class="panel active" id="lat1">
+      <div class="card">
+        <div class="card-label">Latihan 1</div>
+        <div id="hero-text">Ubah warna dan ukuran teks ini sesukamu!</div>
+        <div class="color-grid" id="colorGrid"></div>
+        <div class="size-row">
+          <label for="fontSize">Ukuran font</label>
+          <input type="range" min="14" max="48" value="28" step="1" id="fontSize" oninput="changeSize(this.value)" />
+          <span class="size-out" id="sizeOut">28px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAT 2 -->
+    <div class="panel" id="lat2">
+      <div class="card">
+        <div class="card-label">Latihan 2</div>
+        <div class="bio-form">
+          <input type="text" id="b-nama" placeholder="Nama lengkap" />
+          <input type="text" id="b-ttl" placeholder="Tempat, Tanggal Lahir (cth: Jakarta, 1 Jan 2000)" />
+          <input type="text" id="b-hobi" placeholder="Hobi" />
+          <input type="text" id="b-sekolah" placeholder="Asal sekolah / universitas" />
+        </div>
+        <button class="btn-primary" onclick="showBio()">Tampilkan Biodata</button>
+        <div class="bio-result" id="bioResult">
+          <div class="bio-avatar" id="bioAvatar">?</div>
+          <div class="bio-name" id="bioName"></div>
+          <div class="bio-row"><i class="ti ti-map-pin"></i><span id="bioTtl"></span></div>
+          <div class="bio-row"><i class="ti ti-star"></i><span id="bioHobi"></span></div>
+          <div class="bio-row"><i class="ti ti-school"></i><span id="bioSekolah"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAT 3 -->
+    <div class="panel" id="lat3">
+      <div class="card">
+        <div class="card-label">Latihan 3</div>
+        <div class="calc-grid">
+          <input type="number" id="cA" value="0" oninput="calculate()" />
+          <select class="calc-op-select" id="cOp" onchange="calculate()">
+            <option>+</option>
+            <option>−</option>
+            <option>×</option>
+            <option>÷</option>
+          </select>
+          <input type="number" id="cB" value="0" oninput="calculate()" />
+        </div>
+        <div class="calc-result-box">
+          <div class="eq" id="calcEq">0 + 0</div>
+          <div class="ans" id="calcAns">= 0</div>
+        </div>
+        <div class="calc-history">
+          <div class="hist-label">Riwayat</div>
+          <div id="histList"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAT 4 -->
+    <div class="panel" id="lat4">
+      <div class="card">
+        <div class="card-label">Latihan 4</div>
+        <div class="form-group">
+          <label for="fNama">Nama lengkap</label>
+          <input type="text" id="fNama" placeholder="Min. 3 huruf, hanya huruf & spasi" oninput="valNama()" />
+          <div class="hint" id="hNama"></div>
+        </div>
+        <div class="form-group">
+          <label for="fEmail">Email</label>
+          <input type="text" id="fEmail" placeholder="contoh@email.com" oninput="valEmail()" />
+          <div class="hint" id="hEmail"></div>
+        </div>
+        <div class="form-group">
+          <label for="fPass">Kata sandi</label>
+          <input type="password" id="fPass" placeholder="Min. 6 karakter" oninput="valPass()" />
+          <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+          <div class="hint" id="hPass"></div>
+        </div>
+        <div class="form-group">
+          <label for="fPass2">Konfirmasi kata sandi</label>
+          <input type="password" id="fPass2" placeholder="Ulangi kata sandi" oninput="valPass2()" />
+          <div class="hint" id="hPass2"></div>
+        </div>
+        <button class="btn-primary" onclick="submitForm()">Daftar</button>
+        <div class="success-msg" id="successMsg"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
