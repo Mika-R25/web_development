@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Management System</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Management System</h1>
+
+<form id="studentForm">
+
+<input type="hidden" id="id">
+
+<input type="text" id="npm" placeholder="NPM" required>
+
+<input type="text" id="nama" placeholder="Nama" required>
+
+<input type="text" id="jurusan" placeholder="Jurusan" required>
+
+<input type="number" id="semester" placeholder="Semester" required>
+
+<input type="email" id="email" placeholder="Email" required>
+
+<input type="text" id="alamat" placeholder="Alamat" required>
+
+<button type="submit">
+
+Simpan
+
+</button>
+
+</form>
+
+<hr>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>NPM</th>
+
+<th>Nama</th>
+
+<th>Jurusan</th>
+
+<th>Semester</th>
+
+<th>Email</th>
+
+<th>Alamat</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
